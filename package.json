@@ -1,0 +1,22 @@
+{
+  "name": "macos-lockscreen",
+  "version": "1.0.0",
+  "description": "A command line tools helps MacOS lock screen",
+  "bin": {
+    "lock": "./lockscreen",
+    "lockscreen": "./lockscreen"
+  },
+  "scripts": {
+    "postinstall": "clang -F /System/Library/PrivateFrameworks -framework login -o lockscreen main.c"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crazyurus/lockscreen.git"
+  },
+  "keywords": [
+    "macos",
+    "lockscreen"
+  ],
+  "author": "Crazy Urus <crazyurus@vip.qq.com>",
+  "license": "MIT"
+}
