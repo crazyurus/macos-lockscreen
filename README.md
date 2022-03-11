@@ -1,4 +1,4 @@
-# MacOS Lock Screen CLI
+# MacOS Lock Screen
 
 > Lock your screen in terminal, only supports **macOS**.
 

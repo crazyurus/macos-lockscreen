@@ -1,6 +1,6 @@
 {
   "name": "macos-lockscreen",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "A command line tool helps MacOS lock screen",
   "bin": {
     "lock": "./lockscreen",
@@ -18,7 +18,7 @@
     "main.c"
   ],
   "scripts": {
-    "postinstall": "clang -F /System/Library/PrivateFrameworks -framework login -o lockscreen main.c",
+    "preinstall": "clang -F /System/Library/PrivateFrameworks -framework login -o lockscreen main.c",
     "test": "mocha *.test.js"
   },
   "devDependencies": {
