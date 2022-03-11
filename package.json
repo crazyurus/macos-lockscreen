@@ -7,8 +7,23 @@
     "lockscreen": "./lockscreen"
   },
   "main": "index.js",
+  "types": "index.d.ts",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "*.js",
+    "!*.test.js",
+    "*.d.ts",
+    "main.c"
+  ],
   "scripts": {
-    "postinstall": "clang -F /System/Library/PrivateFrameworks -framework login -o lockscreen main.c"
+    "postinstall": "clang -F /System/Library/PrivateFrameworks -framework login -o lockscreen main.c",
+    "test": "mocha *.test.js"
+  },
+  "devDependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^9.2.1"
   },
   "repository": {
     "type": "git",
