@@ -1,3 +1,3 @@
-declare function lockScreen(): void;
+declare function lockScreen(): Promise<number>;
 
 export default lockScreen;

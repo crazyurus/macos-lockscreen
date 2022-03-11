@@ -1,8 +1,18 @@
 const path = require('path');
-const { execFileSync } = require('child_process');
+const { execFile } = require('child_process');
 
 function lockScreen() {
-  execFileSync(path.join(__dirname, 'lockscreen'), { stdio: 'ignore' });
+  return new Promise((resolve, reject) => {
+    const childProcess = execFile(path.join(__dirname, 'lockscreen'), {
+      stdio: 'ignore',
+    }, error => {
+      if (error) {
+        reject(error);
+      } else {
+        resolve(childProcess.exitCode);
+      }
+    });
+  });
 }
 
 module.exports = lockScreen;

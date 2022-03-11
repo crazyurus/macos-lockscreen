@@ -31,7 +31,9 @@ $ lock
 You can also use this package in Node.js
 
 ```js
-const lockscreen = require('macos-lockscreen');
+const lockScreen = require('macos-lockscreen');
 
-lockscreen();
+await lockScreen();
 ```
+
+After the unlocking is completed, the `lockScreen` will asynchronously return the result code, `0` means the unlocking is successful

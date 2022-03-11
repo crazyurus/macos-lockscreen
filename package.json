@@ -20,5 +20,8 @@
   ],
   "author": "Crazy Urus <crazyurus@vip.qq.com>",
   "homepage": "https://github.com/crazyurus/macos-lockscreen",
-  "license": "MIT"
+  "license": "MIT",
+  "os": [
+    "darwin"
+  ]
 }
